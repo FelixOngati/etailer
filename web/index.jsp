@@ -7,6 +7,8 @@
             <div id="indexLeftColumn">
                 <div id="welcomeText">
                     <p>[ welcome text ]</p>
+                    categoryImagePath:${initParam.categoryImagePath}
+                    productImagePath:${initParam.productImagePath}
                 </div>
             </div>
             <div id="indexRightColumn">
