@@ -11,9 +11,11 @@
 
 <div id="indexLeftColumn">
     <div id="welcomeText">
-        <p>[ welcome text ]</p>
-        categoryImagePath:${initParam.categoryImagePath}
-        productImagePath:${initParam.productImagePath}
+        <p style="font-size: larger">Welcome to the online home of the Affable Bean Green Grocer.</p>
+
+        <p>Enjoy browsing and learning more about our unique home delivery
+            service bringing you fresh organic produce, dairy, meats, breads
+            and other delicious and healthy items to your doorstep.</p>
     </div>
 </div>
 <div id="indexRightColumn">
