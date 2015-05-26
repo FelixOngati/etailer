@@ -5,7 +5,7 @@
     Created on : May 4, 2015, 1:46:41 PM
     Author     : trusty
 --%>
-<sql:query var="categories" dataSource="jdbc/etailer">
+<%--<sql:query var="categories" dataSource="jdbc/etailer">
     SELECT * FROM category
 </sql:query>
 <sql:query var="selectedCategory" dataSource="jdbc/etailer">
@@ -15,9 +15,9 @@
 <sql:query var="categoryProducts" dataSource="jdbc/etailer">
     SELECT * FROM product WHERE category_id = ?
     <sql:param value="${pageContext.request.queryString}"/>
-</sql:query>
+</sql:query>--%>
 <div id="categoryLeftColumn">
-    <c:forEach var="category" items="${categories.rows}">
+    <c:forEach var="category" items="${categories}">
         <c:choose>
             <c:when test="${category.id == pageContext.request.queryString}">
                 <div class="categoryButton" id="selectedCategory">

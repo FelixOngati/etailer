@@ -20,18 +20,19 @@ import session.CategoryFacade;
  * @author trusty
  */
 @WebServlet(name = "ControllerServelet", loadOnStartup = 1, urlPatterns = {"/category",
-                           "/addToCart",
-                           "/viewCart",
-                           "/updateCart",
-                           "/checkout",
-                           "/purchase",
-                           "/chooseLanguage"})
+    "/addToCart",
+    "/viewCart",
+    "/updateCart",
+    "/checkout",
+    "/purchase",
+    "/chooseLanguage"})
 public class ControllerServelet extends HttpServlet {
+
     @EJB
     private CategoryFacade categoryFacade;
-    
+
     @Override
-    public void init() throws ServletException{
+    public void init() throws ServletException {
         //store category list in servelet context
         getServletContext().setAttribute("categories", categoryFacade.findAll());
     }
@@ -110,9 +111,12 @@ public class ControllerServelet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String userPath = request.getServletPath();
-
-        //if addToCart action is called
-        if (userPath.equals("/addToCart")) {
+        if (userPath.equals("/category")) {
+            //get categoryId from request
+            String categoryId = request.getQueryString();
+            
+            //if addToCart action is called 
+        } else if (userPath.equals("/addToCart")) {
 
             //if updateCart action is called  
         } else if (userPath.equals("/updateCart")) {
